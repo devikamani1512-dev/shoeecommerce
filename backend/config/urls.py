@@ -8,6 +8,7 @@ from accounts.views import register_user, login_user
 from orders.views import create_order, order_detail
 from products.views import product_list
 
+
 urlpatterns = [
     path("admin/", admin.site.urls),
 
