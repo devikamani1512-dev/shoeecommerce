@@ -1,0 +1,157 @@
+.delivery-success-page {
+  min-height: 70vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f8f7;
+}
+
+.delivery-success-card {
+  width: min(100%, 900px);
+  padding: 32px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 55, 48, 0.1);
+  text-align: center;
+}
+
+.delivery-success-back {
+  display: block;
+  margin-bottom: 20px;
+  border: none;
+  background: transparent;
+  color: #0b5b50;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delivery-success-check {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e3f5ed;
+  color: #219653;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.delivery-success-card h1 {
+  margin: 0 0 12px;
+  color: #0b5b50;
+  font-size: clamp(26px, 4vw, 38px);
+}
+
+.delivery-success-message {
+  margin: 0 auto 24px;
+  color: #5b6670;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.delivery-success-order-id {
+  margin: 0 0 24px;
+  padding: 14px;
+  border: 1px solid #cfe5df;
+  border-radius: 10px;
+  background: #f2faf7;
+  color: #164f46;
+  overflow-wrap: anywhere;
+}
+
+.delivery-success-product {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  max-width: 650px;
+  margin: 0 auto 30px;
+  padding: 18px;
+  border: 1px solid #d8e5e1;
+  border-radius: 14px;
+  text-align: left;
+}
+
+.delivery-success-product-image {
+  width: 150px;
+  height: 130px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f6f8f8;
+}
+
+.delivery-success-product-info h2 {
+  margin: 0 0 10px;
+  color: #164f46;
+  font-size: 20px;
+}
+
+.delivery-success-product-info p {
+  margin: 5px 0;
+  color: #46545a;
+}
+
+.delivery-success-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.delivery-success-shop-button,
+.delivery-success-details-button {
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 1px solid #0b5b50;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delivery-success-shop-button {
+  background: #0b5b50;
+  color: #fff;
+}
+
+.delivery-success-details-button {
+  background: #fff;
+  color: #0b5b50;
+}
+
+@media (max-width: 600px) {
+  .delivery-success-page {
+    padding: 20px 12px;
+  }
+
+  .delivery-success-card {
+    padding: 22px 16px;
+  }
+
+  .delivery-success-product {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px;
+  }
+
+  .delivery-success-product-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .delivery-success-product-info h2 {
+    font-size: 17px;
+  }
+
+  .delivery-success-actions {
+    flex-direction: column;
+  }
+
+  .delivery-success-shop-button,
+  .delivery-success-details-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,108 @@
+.contact-page {
+  padding: 28px 7% 50px;
+  color: #111;
+  background: #fff;
+}
+
+.contact-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 32px;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #777;
+}
+
+.contact-details h1 {
+  font-size: 24px;
+  margin: 0 0 28px;
+}
+
+.contact-details h3 {
+  font-size: 18px;
+  margin: 18px 0 8px;
+}
+
+.contact-details p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.contact-details a {
+  color: inherit;
+}
+
+.contact-image {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.enquiry-section {
+  max-width: 700px;
+  margin: 28px auto 0;
+}
+
+.enquiry-section h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.enquiry-form label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #777;
+  font: inherit;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-form-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.enquiry-form button {
+  align-self: flex-start;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 5px;
+  background: #2f5250;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .contact-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image {
+    height: 200px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,478 @@
+
+
+.womens-page {
+  position: relative;
+}
+
+.women-back {
+  position: absolute;
+  top: -145px;
+  left: 25px;       /* Right side move */
+  width: auto;
+  margin: 0;
+  padding: 8px 0;
+  border: none;
+  background: transparent;
+  color: #111;
+  font-size: 18px;
+  font-weight: bold; /* Bold letter */
+  cursor: pointer;
+}
+
+.women-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto 25px;
+}
+.women-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.women-filter label {
+  display: inline;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  appearance: none;
+}
+.women-filter-toggle {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #111;
+  font-size: 18px;
+  cursor: pointer;
+}
+.women-filter-options {
+  display: flex;
+  flex: 1;
+  gap: 30px;
+  align-items: center;
+}
+
+.women-filter-options select {
+  flex: 1;
+  min-width: 20;
+  height: 50px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background-color: #d9d9d9;
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: auto;
+  
+}
+
+.women-filter-options select:focus {
+  outline: none;
+  box-shadow: none;
+  
+}
+.women-sort {
+  width: 190px;
+  height: 46px;
+  flex-shrink: 0;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 2px;
+  background-color: #305452;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.women-sort option {
+  background-color: white;
+  color: black;
+}
+@media (max-width: 768px) {
+  .women-back {
+    top: -110px;
+  }
+
+  .women-toolbar {
+    gap: 8px;
+  }
+
+  .women-sort {
+    width: 135px;
+  }
+}
+
+.women-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px 22px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.women-product-card {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+  padding: 0;
+}
+
+.women-image-box {
+  height: 250px;
+  width: 100%; 
+}
+
+.women-image-box img {
+  object-fit: cover;    /* contain → cover, box fill aagum */
+}
+.women-product-info {
+  padding: 8px 9px 10px;
+  background: #fff;
+  border: none;
+}
+
+.women-product-info h3 {
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 600;
+  min-height: 32px;
+  margin: 0 0 3px;
+}
+
+.women-rating {
+  color: #f4b400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.women-price {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.women-colors {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  margin: 7px 0 10px;
+}
+
+.women-color {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.women-color.selected {
+  outline: 1px solid #315653;
+  outline-offset: 2px;
+}
+
+.women-product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+.women-buy-btn,
+.women-cart-btn {
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: 100px;
+  padding: 10px 14px;
+}
+
+
+.women-buy-btn {
+  flex: 1;
+  border: 1px solid #315653;
+  background: #fff;
+  color: #315653;
+}
+
+.women-cart-btn {
+  flex: 1.5;
+  border: 1px solid #315653;
+  background: #315653;
+  color: #fff;
+}
+
+.women-buy-btn:hover {
+  background: #e8f0ef;
+}
+
+.women-cart-btn:hover {
+  background: #244441;
+}
+
+.women-view-all {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.women-view-all button {
+  background: #315653;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.women-empty {
+  text-align: center;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .womens-page {
+    padding: 12px 4% 30px;
+  }
+
+  .women-nav {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .women-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+
+  .women-image-box {
+    height: 135px;
+  }
+
+  .women-product-info {
+    padding: 7px;
+  }
+
+  .women-product-info h3 {
+    font-size: 12px;
+  }
+
+  .women-product-actions {
+    gap: 5px;
+  }
+
+  .women-buy-btn,
+  .women-cart-btn {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .women-image-box {
+    height: 110px;
+  }
+
+  .women-nav {
+    gap: 10px;
+    font-size: 12px;
+  }
+}
+.women-color-filter {
+  flex: 1;
+  position: relative;
+}
+.women-color-filter-toggle {
+  width: 105%;
+  height: 44px;
+  padding: 10px 20px;
+  background: #d9d9d9;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.color-arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: rotate(45deg);
+  margin: -6px 5px 0 0;
+}
+
+.women-color-options {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 120%;
+  padding: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 8px;
+  z-index: 20;
+}
+
+.women-color-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.women-color-option span {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+}
+/* Style, Size, Brands dropdown arrows */
+.women-filter-options select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 24px;
+  padding-right: 35px;
+}
+.women-filter-toggle .filter-arrow {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 900;
+  transform: rotate(90deg);
+  -webkit-text-stroke: 1px currentColor;
+  margin-left: 8px;
+}
+.women-sort-container {
+  width: 190px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.women-sort {
+  width: 100%;
+  height: 50px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 2px;
+  background: #305452;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-arrow {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.women-sort-dropdown {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #305452;
+  z-index: 50;
+}
+
+.women-sort-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  background: white;
+  color: black;
+  text-align: left;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.women-sort-dropdown button:hover {
+  background: #305452;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .women-sort-container {
+    width: 135px;
+  }
+}
+.women-view-all {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding-right: 30px;
+}
+
+.women-view-all button {
+  background: #305452;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 16px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.women-view-all button:hover {
+  background: #244441;
+}
+.women-rating {
+  color: #ffb800;
+  font-size: 22px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.empty-stars {
+  color: #d5d5d5;
+}

@@ -1,0 +1,306 @@
+
+/* Main banner */
+.hero-carousel {
+  position: relative;
+  width: calc(100% - 60px);
+  height: 380px;
+  margin: 24px auto;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+/* All images */
+.hero-image {
+  display: block;
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+}
+
+
+.kids-banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: calc(100% - 90px);
+  height: 380px;
+  margin: 24px auto 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.kids-banner-part {
+  width: 100%;
+  height: 95%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.kids-part-1 {
+  background-position: left center;
+}
+
+.kids-part-2 {
+  background-position: center center;
+}
+
+.kids-part-3 {
+  background-position: right center;
+}
+
+@media (max-width: 768px) {
+  .kids-banner {
+    width: calc(100% - 24px);
+    height: 260px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kids-banner {
+    width: calc(100% - 16px);
+    height: 200px;
+  }
+}
+
+/* 2. Women's red heels */
+.hero-image-2 {
+  object-position: center 115%;
+}
+
+/* 3. Men's shoes */
+.hero-image-3 {
+  object-position: center 95%;
+}
+
+/* 4. Women's blue heels */
+.hero-image-4 {
+  object-position: center 60%;
+}
+
+/* Text overlay */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  width: 320px;
+  max-width: 42%;
+  padding: 22px;
+  box-sizing: border-box;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  z-index: 2;
+}
+
+.hero-overlay h2 {
+  margin: 0 0 12px;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.hero-overlay p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.hero-overlay button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #173f3e;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-overlay button:hover {
+  background: #e8eeee;
+}
+
+/* Carousel dots */
+.hero-dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  z-index: 10;
+}
+
+.hero-dots button {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.hero-dots button::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.hero-dots button.active::after {
+  background: #fff;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero-carousel {
+    width: calc(100% - 24px);
+    height: 320px;
+    margin: 16px auto;
+  }
+
+  .hero-overlay {
+    right: 3%;
+    width: 280px;
+    max-width: 55%;
+    padding: 16px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 23px;
+  }
+
+  .hero-overlay p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero-carousel {
+    width: calc(100% - 20px);
+    height: 280px;
+  }
+
+  .hero-overlay {
+    right: 12px;
+    width: 220px;
+    max-width: 72%;
+    padding: 12px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 20px;
+  }
+
+  .hero-overlay p {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .hero-overlay button {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+
+  .hero-dots {
+    bottom: 12px;
+  }
+}
+/* Kids banner - Figma layout only */
+.hero-carousel:has(.kids-banner) .hero-overlay {
+  top: 12%;
+  left: 4%;
+  right: auto;
+  transform: none;
+  width: 205px;
+  max-width: 60%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.hero-carousel:has(.kids-banner) .hero-overlay h2 {
+  font-size: 25px;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.hero-carousel:has(.kids-banner) .hero-overlay p {
+  display: none;
+}
+
+.hero-carousel:has(.kids-banner) .hero-overlay button {
+  position: absolute;
+  top: 190px;
+  left: -5px;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .hero-carousel:has(.kids-banner) .hero-overlay button {
+    top: 145px;
+  }
+}
+/* Women's red heels - text on left */
+.hero-carousel:has(.hero-image-2) .hero-overlay {
+  left: 4%;
+  right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 410px;
+  max-width: 40%;
+  text-align: center;
+  padding: 12px;
+}
+
+.hero-carousel:has(.hero-image-2) .hero-overlay h2 {
+  font-size: 26px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.hero-carousel:has(.hero-image-2) .hero-overlay p {
+  display: none;
+}
+
+.hero-carousel:has(.hero-image-2) .hero-overlay button {
+  position: absolute;
+  top: calc(100% + 40px);
+  left: 0;
+  white-space: nowrap;
+}
+/* 4th slide - Figma text positioning */
+.hero-carousel:has(.hero-image-4) .hero-overlay {
+  top: 10%;
+  right: 4%;
+  left: auto;
+  transform: none;
+  width: 300px;
+  max-width: 40%;
+  padding: 12px;
+}
+
+.hero-carousel:has(.hero-image-4) .hero-overlay p {
+  display: block;
+}
+
+.hero-carousel:has(.hero-image-4) .hero-overlay button {
+  position: absolute;
+  top: calc(100% + 80px);
+  right: 0;
+  left: auto;
+}

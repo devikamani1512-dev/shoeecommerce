@@ -1,0 +1,253 @@
+.confirmation-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f3f7ff;
+  color: #153b38;
+}
+
+.confirmation-card {
+  width: min(100%, 820px);
+  margin: 0 auto;
+  padding: 36px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(20, 45, 80, 0.1);
+}
+
+.confirmation-success-icon {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #e6f5ee;
+  color: #218653;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.confirmation-card > h1,
+.confirmation-message {
+  text-align: center;
+}
+
+.confirmation-card > h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.confirmation-message {
+  margin: 10px 0 24px;
+  color: #153b38;
+}
+
+.confirmation-order-id {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border: 1px dashed #8bb7b1;
+  border-radius: 10px;
+  background: #f4fbfa;
+}
+
+.confirmation-order-id strong {
+  overflow-wrap: anywhere;
+  color: #2e5d58;
+}
+
+.confirmation-box {
+  padding: 22px;
+  margin-bottom: 20px;
+  border: 1px solid #dce6fa;
+  border-radius: 12px;
+  background: #f8faff;
+}
+
+.confirmation-box h2 {
+  margin: 0 0 18px;
+  font-size: 18px;
+}
+
+.confirmation-product {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #dce6fa;
+}
+
+.confirmation-shoe-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background: #e9eeee;
+  font-size: 50px;
+}
+
+.confirmation-product h3,
+.confirmation-product p {
+  margin: 3px 0;
+}
+
+.confirmation-product h3 {
+  font-size: 16px;
+}
+
+.confirmation-product p,
+.confirmation-box > p {
+  color: #015733;
+  overflow-wrap: anywhere;
+}
+
+.confirmation-total-row,
+.confirmation-grand-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+}
+
+.confirmation-grand-total {
+  margin-top: 14px;
+  padding-top: 18px;
+  border-top: 1px solid #dce6fa;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.confirmation-grand-total strong {
+  color: #2e5d58;
+}
+
+.confirmation-delivery-note {
+  text-align: center;
+  color: #015733;
+}
+
+.confirmation-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.confirmation-actions button {
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 1px solid #2e5d58;
+  border-radius: 9px;
+  background: #fff;
+  color: #015733;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.confirmation-actions .confirmation-primary-button {
+  background: #2e5d58;
+  color: #fff;
+}
+
+.confirmation-actions button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 650px) {
+  .confirmation-page {
+    padding: 20px 12px;
+  }
+
+  .confirmation-card {
+    padding: 22px 16px;
+  }
+
+  .confirmation-product {
+    grid-template-columns: 54px 1fr;
+  }
+
+  .confirmation-shoe-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .confirmation-product > strong {
+    grid-column: 2;
+  }
+
+  .confirmation-actions {
+    grid-template-columns: 1fr;
+  }
+}
+.confirmation-outline-button {
+  font-size: 25px;
+}
+
+.confirmation-outline-button .track-order-icon {
+  font-size: 35px;
+  vertical-align: middle;
+}
+.checkout-progress {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 22px 20px;
+  margin-bottom: 32px;
+  border: 1px solid #e0e7ef;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(27, 55, 72, 0.08);
+}
+
+.checkout-progress::before {
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: #dce4e9;
+}
+
+.progress-step {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  gap: 9px;
+  color: #68788b;
+  font-size: 13px;
+  text-align: center;
+}
+
+.progress-circle {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #dce4e9;
+  border-radius: 50%;
+  background: #f3f6fa;
+  color: #68788b;
+  font-weight: 700;
+  box-shadow: 0 0 0 4px #fff;
+}
+
+.progress-step.active {
+  color: var(--stepup-green);
+  font-weight: 700;
+}
+
+.progress-step.active .progress-circle {
+  border-color: var(--stepup-green);
+  background: var(--stepup-green);
+  color: #fff;
+}
+
+

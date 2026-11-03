@@ -1,0 +1,197 @@
+.track-order-page {
+  min-height: 70vh;
+  padding: 40px 20px;
+  background: #f3f7ff;
+}
+
+.track-order-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.track-order-back {
+  border: 0;
+  background: transparent;
+  color: #245d55;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.track-order-card h1 {
+  margin: 16px 0 8px;
+  text-align: center;
+  color: #245d55;
+}
+
+.track-order-id {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.track-order-product {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px;
+  margin-bottom: 28px;
+  border: 1px solid #dce5f5;
+  border-radius: 12px;
+}
+
+.track-order-product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f7f8fa;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.track-order-product h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.track-order-product p {
+  margin: 4px 0;
+}
+
+.track-order-timeline {
+  margin: 24px 0;
+}
+
+.track-order-stage {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  min-height: 88px;
+}
+
+.track-order-stage-icon {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e8edf2;
+  color: #52616b;
+  font-size: 20px;
+}
+
+.track-order-stage-icon.is-done {
+  background: #2e5c56;
+  color: #fff;
+}
+
+.track-order-stage-line {
+  position: absolute;
+  top: 44px;
+  left: 21px;
+  width: 2px;
+  height: 44px;
+  background: #d8e0e8;
+}
+
+.track-order-stage-text h3 {
+  margin: 2px 0 6px;
+  color: #244f49;
+  font-size: 17px;
+}
+
+.track-order-stage-text p {
+  margin: 0;
+  color: #65717b;
+}
+
+.track-order-shop-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #2e5c56;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .track-order-card {
+    padding: 20px 16px;
+  }
+
+  .track-order-product {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .track-order-product-image {
+    width: 90px;
+    height: 90px;
+  }
+}
+.checkout-progress {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 22px 20px;
+  margin-bottom: 32px;
+  border: 1px solid #e0e7ef;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(27, 55, 72, 0.08);
+}
+
+.checkout-progress::before {
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: #dce4e9;
+}
+
+.progress-step {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  gap: 9px;
+  color: #68788b;
+  font-size: 13px;
+  text-align: center;
+}
+
+.progress-circle {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #dce4e9;
+  border-radius: 50%;
+  background: #f3f6fa;
+  color: #68788b;
+  font-weight: 700;
+  box-shadow: 0 0 0 4px #fff;
+}
+
+.progress-step.active {
+  color: var(--stepup-green);
+  font-weight: 700;
+}
+
+.progress-step.active .progress-circle {
+  border-color: var(--stepup-green);
+  background: var(--stepup-green);
+  color: #fff;
+}

@@ -1,0 +1,88 @@
+.my-orders-page {
+  max-width: 1000px;
+  min-height: 350px;
+  margin: 40px auto;
+  padding: 30px 24px;
+  color: #234f4e;
+}
+
+.my-orders-page h1 {
+  margin: 0 0 24px;
+  color: #234f4e;
+  font-size: 32px;
+  text-align: center;
+}
+
+.my-orders-page > p {
+  color: #64748b;
+  font-size: 16px;
+  text-align: center;
+}
+
+.my-orders-page a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #087f8c;
+  text-decoration: none;
+}
+
+.my-orders-page a:hover {
+  text-decoration: underline;
+}
+
+.my-order-card {
+  margin: 18px 0;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #dbe7e7;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(20, 55, 55, 0.08);
+}
+
+.my-order-card h2 {
+  margin: 0 0 14px;
+  color: #234f4e;
+  font-size: 19px;
+  overflow-wrap: anywhere;
+}
+
+.my-order-card p {
+  margin: 10px 0;
+  color: #52616b;
+  line-height: 1.5;
+}
+
+.my-order-card button {
+  margin-top: 12px;
+  padding: 11px 20px;
+  color: #fff;
+  background: #2d605e;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.my-order-card button:hover {
+  background: #1f4947;
+}
+
+@media (max-width: 600px) {
+  .my-orders-page {
+    margin: 24px auto;
+    padding: 20px 14px;
+  }
+
+  .my-orders-page h1 {
+    font-size: 26px;
+  }
+
+  .my-order-card {
+    padding: 18px;
+  }
+
+  .my-order-card h2 {
+    font-size: 17px;
+  }
+}
