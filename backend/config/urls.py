@@ -6,11 +6,12 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 from accounts.views import register_user, login_user
 from orders.views import create_order, order_detail
+from products.views import product_list
 
 urlpatterns = [
     path("admin/", admin.site.urls),
 
-    path("api/products/", include("products.urls")),
+    path("api/products/", product_list, name="product_list"),
     path("api/register/", register_user, name="register_user"),
     path("api/login/", login_user, name="login_user"),
     path("api/orders/", create_order, name="create_order"),
