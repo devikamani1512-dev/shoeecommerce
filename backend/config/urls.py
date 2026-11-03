@@ -7,9 +7,13 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from accounts.views import register_user, login_user
 from orders.views import create_order, order_detail
 from products.views import product_list
+from django.http import HttpResponse
 
+from django.http import HttpResponse
 
 urlpatterns = [
+    path("", lambda r: HttpResponse("API is Live - try /admin/ or /api/products/")),
+    
     path("admin/", admin.site.urls),
 
     path("api/products/", product_list, name="product_list"),
