@@ -7,18 +7,21 @@ from .serializers import OrderSerializer
 from rest_framework.permissions import IsAuthenticated
 
 
-
 def product_list(request):
-    products = Product.objects.all().values(
-        "id",
-        "name",
-        "category",
-        "description",
-        "price",
-        "image",
-        "stock",
-    )
-    return JsonResponse(list(products), safe=False)
+    data = []
+    for p in Product.objects.all():
+        data.append(
+            {
+                "id": p.id,
+                "name": p.name,
+                "category": p.category,
+                "description": p.description,
+                "price": str(p.price),
+                "image": p.image.url if p.image else "",
+                "stock": p.stock,
+            }
+        )
+    return JsonResponse(data, safe=False)
 
 
 @api_view(["POST"])
