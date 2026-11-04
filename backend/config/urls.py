@@ -6,7 +6,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 from accounts.views import register_user, login_user
 from orders.views import create_order, order_detail
-from products.views import product_list
+from products.views import product_list, add_to_cart, get_cart, remove_cart_item
 from django.http import HttpResponse
 
 
@@ -17,6 +17,9 @@ urlpatterns = [
     path("api/login/", login_user, name="login_user"),
     path("api/orders/", create_order, name="create_order"),
     path("api/orders/<int:order_id>/", order_detail, name="order_detail"),
+    path("api/cart/add/", add_to_cart, name="add_to_cart"),
+    path("api/cart/", get_cart, name="get_cart"),
+    path("api/cart/<int:item_id>/", remove_cart_item, name="remove_cart_item"),
 
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
