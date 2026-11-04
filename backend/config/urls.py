@@ -9,13 +9,9 @@ from orders.views import create_order, order_detail
 from products.views import product_list
 from django.http import HttpResponse
 
-from django.http import HttpResponse
 
 urlpatterns = [
-    path("", lambda r: HttpResponse("API is Live - try /admin/ or /api/products/")),
     
-    path("admin/", admin.site.urls),
-
     path("api/products/", product_list, name="product_list"),
     path("api/register/", register_user, name="register_user"),
     path("api/login/", login_user, name="login_user"),

@@ -124,14 +124,10 @@ STORAGES = {
 
 # Cloudinary: CLOUDINARY_URL set aana mattum (local la ippadiye work aagum)
 if os.environ.get("CLOUDINARY_URL"):
-    INSTALLED_APPS.insert(
-        INSTALLED_APPS.index("django.contrib.staticfiles"), "cloudinary_storage"
-    )
     INSTALLED_APPS.append("cloudinary")
     STORAGES["default"] = {
         "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage"
     }
-
 MAILERS = {
     'default': {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
