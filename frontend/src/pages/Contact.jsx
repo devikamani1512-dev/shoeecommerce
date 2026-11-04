@@ -16,7 +16,7 @@ function Contact() {
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-   await axios.get("http://localhost:8000/api/contact/csrf/", {
+   await axios.post(`${import.meta.env.VITE_API_URL}/api/contact/`, data, {
   withCredentials: true,
 });
 
