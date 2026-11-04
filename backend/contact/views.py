@@ -1,6 +1,6 @@
 import json
 from django.http import JsonResponse
-from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.csrf import ensure_csrf_cookie, csrf_exempt
 from django.views.decorators.http import require_POST
 from .models import ContactMessage
 
@@ -9,7 +9,7 @@ from .models import ContactMessage
 def csrf_token(request):
     return JsonResponse({"detail": "CSRF cookie set"})
 
-
+@csrf_exempt
 @require_POST
 def contact_view(request):
     try:
