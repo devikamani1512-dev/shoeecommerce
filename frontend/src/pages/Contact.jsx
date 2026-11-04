@@ -22,7 +22,7 @@ function Contact() {
 
 const csrfToken = getCookie("csrftoken");
 
-await axios.post("http://localhost:8000/api/contact/", data, {
+await axios.post(`${import.meta.env.VITE_API_URL}/api/contact/`, data, {
   withCredentials: true,
   headers: { "X-CSRFToken": csrfToken },
 });
