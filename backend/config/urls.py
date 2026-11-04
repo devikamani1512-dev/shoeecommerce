@@ -11,7 +11,7 @@ from django.http import HttpResponse
 
 
 urlpatterns = [
-    
+    path("admin/", admin.site.urls),
     path("api/products/", product_list, name="product_list"),
     path("api/register/", register_user, name="register_user"),
     path("api/login/", login_user, name="login_user"),
