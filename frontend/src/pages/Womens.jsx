@@ -23,7 +23,7 @@ function Womens() {
   { name: "Glamo Flat Black Sandals", rating: 3, colors: ["#111111", "#c49a76"] },
 ];
 useEffect(() => {
-  fetch("http://127.0.0.1:8000/api/products/")
+    fetch(`${import.meta.env.VITE_API_URL}/api/products/`)
     .then((response) => response.json())
     .then((data) => {
       const womensProducts = data
@@ -40,7 +40,7 @@ useEffect(() => {
             image: product.image
               ? product.image.startsWith("http")
                 ? product.image
-                : `http://127.0.0.1:8000/media/${product.image.replace(/^\/?media\//, "")}`
+                :`${import.meta.env.VITE_API_URL}/media/${product.image.replace(/^\/?media\//, "")}`
               : "",
             rating: details?.rating ?? (ratingMatch ? Number(ratingMatch[1]) : 4),
             colors: details?.colors ?? colorMatch ?? ["#17294D", "#111111"],

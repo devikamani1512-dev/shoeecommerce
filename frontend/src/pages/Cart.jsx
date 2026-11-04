@@ -30,7 +30,7 @@ function Cart() {
     }
 
     try {
-      const response = await axios.get("http://127.0.0.1:8000/api/cart/", {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/cart/`,  {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -60,7 +60,7 @@ function Cart() {
 
     try {
       await axios.patch(
-        `http://127.0.0.1:8000/api/cart/${item.cart_item_id}/`,
+        `${import.meta.env.VITE_API_URL}/api/cart/${item.cart_item_id}/`,
         { quantity: newQuantity },
         {
           headers: {
@@ -85,8 +85,8 @@ function Cart() {
 
     try {
       await axios.patch(
-        `http://127.0.0.1:8000/api/cart/${item.cart_item_id}/`,
-        { size: newSize },
+        `${import.meta.env.VITE_API_URL}/api/cart/${item.cart_item_id}/`,
+         { size: newSize },
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -106,7 +106,7 @@ function Cart() {
 
     try {
       await axios.delete(
-        `http://127.0.0.1:8000/api/cart/${item.cart_item_id}/`,
+        `${import.meta.env.VITE_API_URL}/api/cart/${item.cart_item_id}/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -183,7 +183,7 @@ function Cart() {
                         src={
                           item.image.startsWith("http")
                             ? item.image
-                            : `http://127.0.0.1:8000${item.image}`
+                            : `${import.meta.env.VITE_API_URL}${item.image}`
                         }
                         alt={item.name || "Product"}
                         onError={(event) => {

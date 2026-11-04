@@ -24,7 +24,7 @@ useEffect(() => {
   setTrackError("");
 
   axios
-    .get(`http://127.0.0.1:8000/api/orders/${state.orderId}/`, {
+        .get(`${import.meta.env.VITE_API_URL}/api/orders/${state.orderId}/`,  {
       headers: {
         Authorization: `Bearer ${token}`,
       },

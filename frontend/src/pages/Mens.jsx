@@ -25,7 +25,7 @@ function Mens() {
 
 
 useEffect(() => {
-  fetch("http://127.0.0.1:8000/api/products/")
+    fetch(`${import.meta.env.VITE_API_URL}/api/products/`)
     .then((response) => response.json())
     .then((data) => {
       const mensProducts = data
@@ -37,7 +37,7 @@ useEffect(() => {
     image: product.image
   ? product.image.startsWith("http")
     ? product.image
-    : `http://127.0.0.1:8000${product.image.startsWith("/") ? "" : "/media/"}${product.image.replace(/^\/+/, "")}`
+    :`${import.meta.env.VITE_API_URL}${product.image.startsWith("/") ? "" : "/media/"}${product.image.replace(/^\/+/, "")}`
   : local
   ? `/images/men${local.id}.png`
   : "",
@@ -84,8 +84,8 @@ setProducts(mensProducts);
   }
 
   try {
-   await axios.post(
-  "http://127.0.0.1:8000/api/cart/add/",
+      await axios.post(
+  `${import.meta.env.VITE_API_URL}/api/cart/add/`,
   {
         product_id: product.id,
         quantity: 1,

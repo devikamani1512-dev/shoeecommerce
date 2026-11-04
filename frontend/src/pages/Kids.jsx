@@ -26,7 +26,7 @@ function Kids() {
   const [products, setProducts] = useState([]);
 
 useEffect(() => {
-  fetch("http://127.0.0.1:8000/api/products/")
+    fetch(`${import.meta.env.VITE_API_URL}/api/products/`)
     .then((res) => res.json())
     .then((data) => {
       const kids = data
@@ -39,7 +39,7 @@ useEffect(() => {
             image: p.image
               ? p.image.startsWith("http")
                 ? p.image
-                : `http://127.0.0.1:8000/media/${p.image.replace(/^\/?media\//, "")}`
+                :`${import.meta.env.VITE_API_URL}/media/${p.image.replace(/^\/?media\//, "")}`
               : local
               ? `/images/kids${local.id}.png`
               : "",

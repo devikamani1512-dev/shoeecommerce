@@ -59,7 +59,7 @@ const [loading, setLoading] = useState(true);
 
 useEffect(() => {
   axios
-    .get("http://127.0.0.1:8000/api/products/")
+        .get(`${import.meta.env.VITE_API_URL}/api/products/`)
     .then((res) => {
      const found = res.data.find((item) => item.id === Number(id));
 
@@ -142,8 +142,8 @@ const handleAddToCart = async () => {
   }
 
   try {
-    await axios.post(
-      "http://127.0.0.1:8000/api/cart/add/",
+        await axios.post(
+      `${import.meta.env.VITE_API_URL}/api/cart/add/`,
       {
         product_id: product.id,
         size: String(selectedSize),
@@ -221,7 +221,7 @@ const handleAddToCart = async () => {
     ? ""
     : product.image.startsWith("http")
     ? product.image
-    : `http://127.0.0.1:8000/media/${product.image.replace(/^\/?media\//, "")}`
+    :`${import.meta.env.VITE_API_URL}/media/${product.image.replace(/^\/?media\//, "")}`
 }
   alt={product.name}
 />

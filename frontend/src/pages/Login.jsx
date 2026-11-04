@@ -68,9 +68,9 @@ function Login() {
     return;
   }
 
-  const endpoint = isRegister
-    ? "http://127.0.0.1:8000/api/register/"
-    : "http://127.0.0.1:8000/api/login/";
+   const endpoint = isRegister
+    ? `${import.meta.env.VITE_API_URL}/api/register/`
+    : `${import.meta.env.VITE_API_URL}/api/login/`;
 
   const payload = isRegister
     ? {
